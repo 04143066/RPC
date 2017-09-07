@@ -10,6 +10,10 @@ import java.util.concurrent.Executors;
 
 /**
  * 服务端服务发布者代码实现
+ * ①作为服务端，监听客户端的TCP连接，接收到新的客户端连接之后，将其封装成Task,有线程池执行。
+ * ②将客户端发送的码流反序列化成对象，反射调用服务实现者，获取执行效果。
+ * ③将执行结果对象反序列化，通过Socket发送给客户端。
+ * ④远程服务调用完成之后，释放Socket等连接资源，防止句柄泄漏。
  * Created by xx on 2017/9/7.
  */
 public class RpcExporter {
