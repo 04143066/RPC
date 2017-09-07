@@ -1,5 +1,5 @@
 /**
- *
+ * 服务端接口实现
  * Created by zouxiongxin on 2017/9/7.
  */
 public class EchoServiceImpl implements EchoService{
