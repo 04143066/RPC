@@ -1,3 +1,4 @@
+package Server;
 
 /**
  * 服务端接口定义
